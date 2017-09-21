@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			#box{
+				width: 200px;
+				height: 200px;
+				background: red;;
+			}
+		</style>
+	</head>
+	<body>
+	  <div id = 'box'>
+	</body>
+</html>
+<script>
+	//字符串链接之i-j
+//	var table="<table>";
+//	for(i=0;i<=9;i++){
+//		table=table+"<tr>";
+//		for(j=0;j<=9;j++){
+//			var color;
+//			if(j%2==0){
+//				color="red";
+//			}
+//			else{
+//				color="green";
+//			}
+//			table=table+"<td bgcolor ="+color+">"+i+"-"+j+"</td>";
+//		}
+//	}
+//	document.write(table);
+//	
+//	
+//	
+//	//金字塔
+//	var row=5;
+//	for(i=1;i<=row;i++){
+//		for(var j=1;j<=row-i;j++){
+//			document.write("&nbsp");
+//		}
+//		for(var j=1;j<=2*i-1;j++){
+//			document.write("*");	
+//		}
+//		document.write("<br>");
+//	}
+//	
+//	
+//	
+//	//兔子数列
+//	var i=1,j=1;
+//	for(var k=0;k<=100;){
+//		k=i+j;
+//		i=j;
+//		j=k;
+//		document.write(k);
+//		document.write("&nbsp");
+//	}
+//	
+//	
+//	
+//	//遍历数组
+//	var arr=[3,4,32,1,11,4,32]
+//	for(i=0;i<arr.length;i++){
+//		document.write(arr[i]);
+//	}
+//	
+//	
+//	//数组最大值
+//	var arr=[34,3,2,86,22,45];
+//	var max=arr[0];
+//	for(i=1;i<arr.length;i++){
+//		if(max<arr[i]){
+//			max=arr[i];
+//		}
+//	}
+//	document.write(max);
+//	
+	
+	//数组排序
+//	var arr=[34,3,2,86,22,45];
+//	for(i=0;i<arr.length;i++){
+//		for(j=i+1;j<arr.length;j++){
+//			if(arr[i]<arr[j]){
+//			var temp;
+//			temp=arr[i];
+//			arr[i]=arr[j];
+//			arr[j]=temp;
+//			}
+//		}
+//	}
+//	console.log(arr);
+//	
+	
+	//数组去空
+	
+//	var arr=[3,4,25,6,3,,1];
+//	var newarr=[];
+//	for(i=0;i<arr.length;i++){
+//		if(arr[i]==undefined){
+//			continue;
+//		}
+//		newarr[newarr.length]=arr[i];
+//	}
+//	console.log(newarr);
+//	  
+//	  
+	 //想乘法就乘法 用函数当变量名
+//	 var arr=[1,2,3,4,5,6];
+//	 
+//	 var r = map(arr,function(x){
+//	 	return x*2;
+//	 });
+//	 alert(r);
+//	 function map(arr,fn){
+//	 	var newarr = [];
+//	 	for (i=0;i<arr.length;i++) {
+//	 		newarr[newarr.length] = fn(arr[i]);
+//	 	}
+//	 	return newarr;
+//	 }
+//	 
+	 
+	 //输出任意数组里的偶数或者奇数
+//	 var arr=[1,2,3,4,5,6,7,8];
+//	 var r = filter(arr,function(){
+//	 return arr[i]%2==1;
+//	 });
+//	 alert(r);
+//	 alert (filter(arr));
+//	 function filter(arr,fn){
+//	 	var newarr=[];
+//	 	for (i=0;i<arr.length;i++) {
+//	 		if(fn(arr[i])){
+//	 			newarr[newarr.length]=arr[i];
+//	 		}
+//	 	}
+//	 	return newarr;
+//	 }
+	 
+	 
+	 
+	 //输出数组中所有元素的任意倍数
+//	 var arr=[1,2,3,4,5,6];
+//	 var result = map(arr,function(x){
+//	 	return x*3;
+//	 });
+//	 alert(result);
+//	 function map(arr,fn){
+//	 	var newarr=[];
+//	 	for (i=0;i<arr.length;i++) {
+//	 		newarr[newarr.length]=fn(arr[i]);
+//	 	}
+//	 	return newarr;
+//	 }
+
+
+    //原型对象
+//  function Person(){
+//  	this.age = 18;
+//  	this.sex = 'nan';
+//  	this.eat = function(){
+//  		alert('吃饭');
+//  	}
+//  }
+//  Person.prototype = {
+//  	sleep:function(){
+//  		alert('休息');
+//  	}
+//  }
+//  
+//  function Student(){
+//  	this.class = '1707';
+//  	this . tec = '李星';
+//  	this.play = function(){
+//  		alert('我爱玩儿');
+//  	}
+//  }
+//  
+//  Student.prototype = new Person();
+//  Student.prototype ={
+//  	study : function(){
+//  		alert('学习啦啦啦');
+//  	}
+//  }
+//  let zhangsan = new Person();
+//  let lisi = new Student();
+////  console.log(lisi.age);
+////  lisi.study();
+////  console.log(Person.prototype);
+//    console.log(lisi instanceof Student);
+
+//    let re = replaceAll('abcdefgabcd','ab');
+//    console.log(re);
+//    function replaceAll(str,nstr){
+////    	let star = '' ;
+////    	for (let i=0;i<nstr.length;i++) {
+////    		star += '*'
+////    	}
+//      let star = '*'.repeat(nstr.length);
+//    	while(str.includes(nstr)){
+//    		str = str.replace(nstr,star);
+//    	}
+//    	return str;
+//    }
+
+
+
+//  let url = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com'
+//  function pos(str,nstr){
+//  	let arr = [];
+//  	let star = '*'.repeat(nstr.length);
+//  	while(str.includes(nstr)){
+//  		arr[arr.length] = str.indexOf(nstr);
+//  		str = str.replace(nstr,star)
+//  	}
+//  	return arr;
+//  }
+//  let result = pos(url,'baidu');
+//  console.log(result);
+    
+//  let url = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+//  function pos(str,value){
+//  	let arr= [];
+//  	for(i=0;i<str.length;i++){
+//  	  if((str.slice(i,i+5)) == value){
+//  		arr.push(i);
+//  	 }
+//  	}
+//  	return arr;
+//  }
+//  console.log(pos(url,'baidu'));
+
+
+    function color(){
+    	let str = 'rgb(';
+    	for (let i=0;i<3;i++) {
+    		let num = Math.round(Math.random()*255);
+    		str += num+',';
+    	}
+    	str = str.slice(0,-1);
+    	str += ')';
+    	return str;
+    } 
+    let box = document.getElementById('box');
+    box.onmouseover = function(){
+    	box.style.background = color();
+    }
+
+
+
+    //随机抽取num个不重复的元素放在新数组里
+//  let arr = [1,2,3,4,5,6];
+//  function ru(arr,num){
+//  	let newarr = [];
+//  	for (let i=0;i<num;i++) {
+//  		let index = Math.floor(Math.random()*arr.length);
+//  		while(newarr.includes(arr[index])){
+//  			index = Math.floor(Math.random()*arr.length);
+//  	   }
+//  		newarr.push(arr[index]);
+//      }
+//  	return newarr;
+//  }
+//  console.log(ru(arr,3));
+
+
+    //去重1
+//  let arr = [1,2,3,4,5,6,1,2,3];
+//  function chong(){
+//  	let newarr = [];
+//  	for (let i=0;i<arr.length;i++) {
+//  		let flag = true;
+//  		for (let j=i+1;j<arr.length;j++) {
+//  			if(arr[i]==arr[j]){
+//  			flag = false;
+//  			break;
+//  		   }	
+//  		}
+//  	    if(flag){
+//  	    	newarr.push(arr[i]);
+//  	    }
+//  }	
+//  	return newarr;
+//  }
+//  console.log(chong(arr));
+    
+    //去重2
+//  let arr=[1,2,3,4,5,1,2,3];
+//  function quchong (){
+//  	let newarr=[];
+//  	for (let i=0;i<arr.length;i++) {
+//  		if(!(newarr.includes(arr[i]))){
+//  			newarr.push(arr[i]);
+//  		}
+//  	}
+//  	return newarr;
+//  }
+//  console.log(quchong(arr));
+</script>

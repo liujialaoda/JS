@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			button{
+				width: 50px;
+				height: 25px;
+				background: blueviolet;
+				color: #fff;
+				line-height: 25px;
+				text-align: center;
+				border-radius: 4px;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1><a href="BOM.html">这是bom1的页面</a></h1>
+		<button id = 'forward'>前进</button>
+		<button id = 'back'>后退</button>
+		<button id = 'refresh'>刷新</button>
+	</body>
+	<script>
+		    let forward = document.getElementById('forward');
+            forward.onclick = function(){
+            	history.forward();
+            }
+            
+            let back = document.getElementById('back');
+            back.onclick = function(){
+            	history.back();
+            }
+            let refresh = document.getElementById('refresh');
+            refresh.onclick = function(){
+            	history.go(0);
+            }
+	</script>
+</html>

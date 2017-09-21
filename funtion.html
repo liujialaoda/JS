@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			
+//	//正儿八经变色乘法表
+//	fn(13,20);
+//	function fn(x,y){
+//		document.write("<table border='1px' >")
+//          for(var i=1;i<=x;i++){
+//          	document.write("<tr>");
+//           	for(var j=1;j<=y;j++){
+//           		if(j%2==0){
+//           			if(i%2==0){
+//           		        document.write("<td bgcolor='aqua'>"+i+"*"+j+"="+i*j+"</td>");	
+//           			}
+//           			if(i%2==1){
+//           		        document.write("<td bgcolor='red'>"+i+"*"+j+"="+i*j+"</td>");		
+//           			}
+//           		}
+//           		if(j%2==1){
+//           			if(i%2==1){
+//           		        document.write("<td bgcolor='aqua'>"+i+"*"+j+"="+i*j+"</td>");	
+//           			}
+//           			if(i%2==0){
+//           		        document.write("<td bgcolor='red'>"+i+"*"+j+"="+i*j+"</td>");		
+//           			}
+//           		}
+//           	}
+//           	document.write("</tr>");
+//           }
+//      document.write("</table>");
+//  } 
+//  
+//  
+//  
+//   //字符串拼接乘法表
+////      var a=prompt("输入",1);
+//  fn(10,20);
+//  function fn(x,y){
+//      var table="<table border='1'>";
+//          for(var i=1;i<=x;i++){
+//          	var color;
+//          	if(i%2==0){
+//          		color="yellow";
+//          	}
+//          	if(i%2==1){
+//          		color="green";
+//          	}
+//          	table=table+"<tr bgcolor="+color+">";
+//          	for(var j=1;j<=y;j++){
+//          		table=table+"<td >"+i+"-"+j+"</td>";
+//          	}
+//          }
+//      document.write(table);
+//  }
+//  
+//  
+//  
+//  
+//     //金字塔
+//  ta(10);
+//  function ta(x){
+////      var row=5;
+//      for(var i=1;i<=x;i++){
+//      	for( var j=1;j<=x-i;j++){
+//      		document.write("&nbsp");
+//      	}	
+//      	for( var j=1;j<=2*i-1;j++){
+//      		document.write("*");
+//      	}
+//      	document.write("<br>");
+//      }
+//  }    
+
+
+
+//斐波那契数列
+    fei(300);
+    function fei(x){ 
+    	var x = prompt("shu",2)
+       var i=1;j=0;
+        for(var k=0;k<=x;){
+        	k=i+j;
+        	document.write(k);
+        	document.write("&nbsp");
+        	i=j;
+        	j=k;
+        }
+    } 
+
+
+
+ //遍历数组
+//  var arr2=[12,56,32,1,78,54];
+//  shu(arr2);
+//  function shu(arr1){
+////       var arr1=[23,54,86,12,9,76];
+//           for(i=0;i<arr1.length;i++){
+//           	document.write(arr1[i]);
+//           	document.write(" ");
+//           }
+//  }
+    
+    
+    
+ //数组排序
+//  var arr1=[2,56,32,64,221,1];
+//  pai(arr1);
+//  function pai(arr){
+////  var arr=[23,54,86,12,9,76];
+//          for(i=0;i<arr.length;i++){
+//          	for(j=i+1;j<arr.length;j++){
+//          		if(arr[i]<arr[j]){
+//          			var temp=arr[i];
+//          			arr[i]=arr[j];
+//          			arr[j]=temp;
+//          	   }
+//              }
+//          }
+//      alert(arr);  
+//  }
+
+
+
+//数组去空
+//  var arr1=[1,3,6,3,33,,2,,7];
+//  kong(arr1);
+//  function kong(arr){
+////   var arr=[5,6,4,3,2,,7];
+//      var newarr=[];
+//      for(i=0;i<arr.length;i++){
+//      	if(arr[i]==undefined){
+//      		continue;
+//      	}
+//      	newarr[newarr.length]=arr[i];
+//      }
+//      console.log(newarr);
+//  }
+
+
+
+//二维数组求最大值
+    var arr1=[[2,5,3],[67,54,33],[44,22,11]];
+    max(arr1);
+    function max(arr){
+//   var a=[2,5,6],b=[9,78,43,100];c=[45,23,87];       
+//      var arr=[a,b,c];
+        var max=arr[0][0];
+        for(i=0;i<arr.length;i++){
+        	for(j=0;j<arr[i].length;j++){
+        		if(max<arr[i][j]){
+        			max=arr[i][j];
+        		}
+        	}
+        }
+        console.log(max);
+    }
+		</script>
+	</body>
+</html>

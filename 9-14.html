@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			#box{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = 'box'>
+		<script>
+//			//判断数组中是否存在某个值，如果存在，返回这个值在数组中首次的位置，反之如果不存在，返回-1;
+//			var arr=[1,2,3,4,5,6];
+//			alert (indexof(arr,5));
+//			function indexof(arr,x){
+//				for (i=0;i<arr.length;i++) {
+//					if(arr[i] == x){
+//						return i;
+//					}
+//				}
+//				return -1;
+//			}
+//		   	
+		   	
+		   	
+//		 //返回某元素在数组中最后一次出现的次数， 
+//		    var arr=[1,2,3,4,5,6,1];
+//			alert (lastIndexof(arr,1));
+//			function lastIndexof(arr,x){
+//				for (i=arr.length-1;i>=0;i--) {
+//					if(arr[i] == x){
+//						return i;
+//					}
+//				}
+//				return -1;
+//			}
+		   	
+		   	
+		   	
+//		//把数组反转过来
+//		    var arr=[1,2,3,4,5,6];
+//			alert(reverse(arr));
+//			function reverse(arr){
+//				var newarr=[];
+//				for (i=arr.length-1;i>=0;i--) {
+//					newarr[newarr.length] = arr[i];
+//				}
+//			    return newarr;
+//			}
+//		   	
+
+
+//		   //往数组里添加元素
+//		var arr=[1,2,3,4,5,6];
+//		console.log (reverse(arr));
+//		function reverse(arr){
+//			var newarr=[];
+//		   	for (var i=arr.length-1;i>-1;i--) {
+//		   		push(newarr,arr[i]);
+//		   	}
+//		   	return newarr;
+//		}
+//		
+//		function push(arr,...rest){
+//			for (var i=0;i<rest.length;i++) {
+//				arr[arr.length] = rest[i];
+//			}
+//		}
+
+
+
+         
+         //任意数组，在任意位置删除任意数量个元素
+//       var arr=[1,2,3,4,5];
+//       console.log (apliceCancel(arr,1,2));
+//       function apliceCancle(arr,pos,num){
+//       	var newarr=[];
+//       	for (var i=0;i<arr.length;i++) {
+//       		if(i>=pos && i<pos+num){
+//       			continue;
+//       		}
+//       		newarr[newarr.length] = arr[i];
+//       	}
+//       	return newarr;
+//       }
+         
+         
+         
+        //任意数组，任意位置添加任意元素
+//      var arr=[1,2,3,4,5];
+//      console.log (apliceAdd(arr,1,'x','y'));
+//      function apliceAdd(arr,pos,...rest){
+//       	var newarr=[];
+//       	for(var i=0;i<pos;i++) {
+//       		newarr[newarr.length] = arr[i];
+//       	}
+//       	for(var i=0;i<rest.length;i++){
+//       		newarr[newarr.length] = rest[i];
+//       		}
+//       	for(var i=pos;i<arr.length;i++){
+//       		newarr[newarr.length] = arr[i];
+//       		}
+//       	return newarr;
+//      }
+//  
+         
+        
+         
+        //万能的添加删除任意个的元素
+//      function aplice(arr,pos,num,...rest){
+//      	var newarr=[] ;
+//      	newarr = apliceCancle(arr,pos,num);
+//      	if(rest.length>0){
+//      		newarr = apliceAdd(newarr,pos,...rest);
+//      	}
+//      	return newarr;
+//      }
+//      var arr=[1,2,3,4,5];
+//      alert (aplice(arr,1,2,'x','y'));
+//      
+//      function apliceCancle(arr,pos,num){
+//       	var newarr=[];
+//       	for (var i=0;i<arr.length;i++) {
+//       		if(i>=pos && i<pos+num){
+//       			continue;
+//       		}
+//       		newarr[newarr.length] = arr[i];
+//       	}
+//       	return newarr;
+//       }
+//      
+//       function apliceAdd(arr,pos,...rest){
+//       	var newarr=[];
+//       	for(var i=0;i<pos;i++) {
+//       		newarr[newarr.length] = arr[i];
+//       	}
+//       	for(var i=0;i<rest.length;i++){
+//       		newarr[newarr.length] = rest[i];
+//       		}
+//       	for(var i=pos;i<arr.length;i++){
+//       		newarr[newarr.length] = arr[i];
+//       		}
+//       	return newarr;
+//      }
+         
+         
+         
+         //map 映射
+//       var arr=[1,2,3,4,5,6];
+//       var result = map(arr,function(x){
+//       	return x*5;
+//       });
+//       alert (result);
+//       function map(arr,fn){
+//       	var newarr=[];
+//       	for (var i=0;i<arr.length;i++) {
+//       		newarr[newarr.length] = fn(arr[i]);
+//       	}
+//       	return newarr;
+//       }
+         
+         
+         
+         //把符合条件的筛选出来
+//      var arr = [11,22,33,44,55,66];
+//      var result = filter(arr,function(x){
+//       	return x>20;
+//      });
+//      alert(result);
+//      function filter(arr,fn){
+//       	var newarr=[];
+//       	for (var i=0;i<arr.length;i++) {
+//       		if(fn(arr[i])){
+//       			newarr[newarr.length] = arr[i];
+//       		}
+//       	}
+//       	return newarr;
+//       }
+        
+        
+        //some 是否存在某“一个”符合条件的值  ,如果有，返回true，如果数组里的都不符合条件，返回false
+//      var arr = [11,22,33,44,55,66];
+//      var result = some(arr,function(x){
+//       	return x>0;
+//      });
+//      alert(result);
+//      function some(arr,fn){
+//       	for (var i=0;i<arr.length;i++) {
+//       		if(fn(arr[i])){
+//       			return true;
+//       		}
+//       	}
+//       	return false;
+//       }
+        
+        
+        
+        //every  所有元素都满足条件时，返回true，只要有一个不满足，就返回false
+//      var arr = [11,22,33,-44,55,66];
+//      var result = every(arr,function(x){
+//       	return x>0;
+//      });
+//      alert(result);
+//      function every(arr,fn){
+//       	for (var i=0;i<arr.length;i++) {
+//       		if(!fn(arr[i])){
+//       			return false;
+//       		}
+//       	}
+//       	return true;
+//       }
+        
+        
+        
+        //递归  自己在调用本身，但不是循环
+          // 需要有一个出口 在这里的出口就是num<5
+        
+//      fn(1);
+//      function fn(num){
+//      	if(num<5){
+//      		fn(++num);
+//      	}
+//      	alert(num);     //结果是5 5 4 3 2
+//      }
+//      
+//      
+//      fn1();
+//      function fn1(){
+//      	fn2(2);
+//      	alert(1);
+//      }
+//      function fn2(){
+//      	fn3(3);
+//      	alert(2);
+//      }
+//      function fn3(){
+//      	fn4(4);
+//      	alert(3);
+//      }
+//      function fn4(){
+//      	alert(4);   //结果为4 3 2 1
+//      }
+
+
+//      //把一个数组的值给另一个数组,两种方法
+//      //第一种     传的是地址---浅拷贝
+//      var arr=[1,2,3,4,5,6];
+//      var arr1=arr;
+//      arr1[2]='x';
+//      arr[1]='y'; //当其中一个数组中任意元素发生变化时，另一个数组中对应位置的元素也被改了
+//      console.log(arr);     //结果是[1,'y','x',4,5,6];
+//      console.log(arr1);   //结果是[1,'y','x',4,5,6]
+//     
+//     
+//      //第二种       传的是值----深拷贝
+//      var arr=[1,2,3,4,5,6];
+//      var arr1=[];
+//      for (i=0;i<arr.length;i++) {
+//      	arr1[i] = arr[i]
+//      }
+//      arr1[2]='x';  
+//      arr[1]='y';    //两个数组没关系，自己变自己的
+//      console.log(arr);     //结果是[1,'y',3,4,5,6];
+//      console.log(arr1);   //结果是[1,2,'x',4,5,6];
+        
+        
+        
+        //  实例 数组的拷贝
+//      var arr = [1,2,3,4,['x','y','z']];
+//      console.log(copy(arr));
+//      function copy(arr){
+//      	var newarr = [];
+//      	for (var i=0;i<arr.length;i++) {
+//      		if (typeof arr[i] == 'object'){
+//      			newarr[i] = copy(arr[i]); 
+//      		}
+//      		else{
+//      			newarr[i] = arr[i];
+//      		}	
+//      	}
+//      	return newarr;
+//      }
+
+
+
+
+        //闭包
+//      function fn(){
+//      	var num = 10;
+//      	return fn1;
+//      	function fn1(){
+//      		num++;
+//      		return num;
+//      	}
+//      }
+//      var result = fn();
+//       alert(result());         //11
+
+
+        
+        
+       //箭头函数
+//     var fn = function(a){
+//     	return a;
+//     }
+//     var fn = a=>a;
+//     fn(1);
+//     alert(fn(1));
+
+
+
+
+       //let 声明变量
+//  var num = 10;
+//  function fn(){
+//  	console.log(num);
+//  	if(true){
+//  		var num = 'x';
+//  	}
+//  }
+//  fn();  
+//  
+//  let num = 10;
+//  function fn(){
+//  	console.log(num);
+//  	if(true){
+//  		var num = 'x';
+//  	}
+//  }
+//  fn();  
+//  
+//  
+//  var num= 20;
+//  function fn(){
+//  	alert(num);    //underfined
+//  	if(true){ 
+//  		var num=10;      //如果是let num=10，第一个弹20
+//  		alert(num);     //10
+//  	}
+//  }
+//  fn();
+    
+    
+    
+    
+    
+    
+//  var arr=[];
+//  for (var i =0;i<10;i++) {
+//  	arr[i] = function(){
+//  		alert(i);
+//  	}
+//  }
+//  arr[2]();      //10
+//  
+//  var arr=[];
+//  for (let i =0;i<10;i++) {
+//  	arr[i] = function(){
+//  		alert(i);
+//  	}
+//  }
+//  arr[2]();     //2
+
+
+
+
+
+        // const 声明变量,
+//      const pi = 3.14;
+//      alert(pi);
+//     
+       
+       
+        //内置顶层函数
+        //escape()   unescape()  Number()    String()   Boolean()   parseInt()   parseFloat()  isNaN()
+//      let str = '张三';
+//      alert (escape(str));    //对汉字编码
+//      console.log (unescape("%u5F20%u4E09"));    //解码
+        
+//      alert (Number(0b1111));    //15
+//      alert (Number(true));    //1
+//      alert (Number(null));    //0
+//      alert (Number(undefined));    //NaN
+//      alert (Number("123"));    //123
+//      alert (Number("00123"));    //123
+//      alert (Number(0123));    //83   八进制的
+//      alert (Number(09));    //9   十进制的
+//      alert (Number(123.00));    //123
+//      alert (Number("123.00"));    //123     --字符串不识别进制，
+//      alert (Number("123.01.1"));    //NaN       ---不是标准的小数，所以转换结果是NaN
+//      alert (Number("123px"));    //123
+//      alert (Number("abcd"));    //NaN
+//      alert (Number("true"));    //NaN  
+
+
+
+//      alert (Boolean(""));
+
+       
+       //parseInt();把字符串转换为整数
+       //parseFloat();把字符串转换为小数
+        
+//      alret (parseInt('1234'));   //1234
+//      alret (parseInt('0b1111'));   //0  
+//      alret (parseInt('100px'));   //100
+//      alret (parseInt('  -100px200'));   //-100
+//      alret (parseInt('abc100px200'));   //NaN 
+        //以数字、空格、正负号开头的数字可以转换，从第一个数字开始，直到第一个非数字结束
+        
+        
+//    console.log (parseFloat("333"));   //1234
+
+
+
+//    console.log (isNaN(false));   //false   false不是一个数字吗，不是绝对的数字，只要可以转换为数字就行了
+      
+      
+      
+        //对象
+        //json 方式创建对象
+//        let zhangsan = {	}
+//        zhangsan.age = 10;
+//        console.log(zhangsan.age);
+        //第二种      通过构造函数创建对象
+//      function Person(){
+//      	
+//      } 
+//      let zhangsan = new Person();
+//      let lisi = new Person();
+//      //添加属性 
+//      //谁 什么   值
+//      zhangsan.age = 18;
+//      zhangsan.name = 'zhangsan';
+//      lisi.weight = 50;
+//      lisi.add='山东';
+//      lisi.sex = '女';
+//      //访问
+//      //谁 什么
+//      //添加方法 谁 什么 
+//      zhangsan.say = function (){
+//      	alert(zhangsan.age);
+//      }
+//      console.log(zhangsan.name);
+//      console.log(lisi);
+//      zhangsan.say();
+
+         
+         
+         
+         
+        //9-12
+         
+         
+        //
+//      function Student(){
+//      	
+//      }
+//      let zhangsan = new Student();
+//      zhangsan.age = 18;
+//      zhangsan.weight = 30;
+//      zhangsan.say = function(){
+//      	alert(zhangsan.age);
+//      }
+//      console.log(zhangsan);
+//      zhangsan.say();
+
+//      //创建的同时添加属性方法
+//      function Student(name,age,sex){
+//          this.sex = sex;
+//      	this.name=name;
+//      	this.age=age;
+//      	this.say = function (){
+//      		alert(1);
+//      	}
+//      }
+//      let zhangsan = new Student('zhangsan',18,'nv');
+//      let lisi = new Student('lisi',null,'nan');       
+//      console.log(zhangsan);
+//      console.log(lisi);
+        
+        
+        
+//      function tel(name,color,size){
+//      	this.name = name;
+//      	this.color = color;
+//      	this.size  = size; 
+//      	this.music = function(){
+//      		alert('音乐');
+//      	}
+//      }
+//      let vivo = new tel('vivo','white','5.5');
+//      let oppo = new tel('oppo','black','5.3');
+//      let xiaomi = new tel('xiaomi','red','5.0');
+//
+//      console.log(vivo);
+//      console.log(oppo);
+//      console.log(xiaomi);
+////      
+//
+//      //for in 
+////      alert (vivo['color']);
+////      vivo['music']();
+//      for(let i in vivo){
+//      	console.log(`${i}-${vivo[i]}`);
+//      }
+        
+        
+        //json     每一个对象都有一个属性  constructor,返回对象的构造函数
+//      let zhangsan = {};
+//      alert(zhangsan.constructor);    //返回其构造函数
+//      zhangsan.age = 18;
+//      zhangsan.name = 'zhangsan';
+//      console.log(zhangsan);
+//      function Object(){
+//      	
+//      }
+//      let zhangsan = new Object();
+        
+        
+        //json 第二种
+//      let zhangsan = {
+//      	'age' : 18,       //属性名的引号可有可无
+//      	'name' : 'zhangsan',
+//      	'sex' :'nan',
+//      	say : function(){
+//      		alert(1);
+//      	}
+//      }
+//      console.log(zhangsan);
+//      zhangsan.say();
+
+
+
+       //json添加属性方法   excecise           one
+//      let zhangsan = {};
+//      zhangsan.sex = 'nan';
+//      zhangsan.age = 18;
+//      console.log(zhangsan);
+        
+        
+//      let zhangsan = {
+//      	age : 18,
+//      	sex : '女',
+//      	
+//      }
+//      console.log(zhangsan);
+//      for (let i in zhangsan){
+//      	console.log(`${i}----${zhangsan[i]}`);
+//      }
+
+
+
+
+       //class 通过类创建对象
+//  class Student{
+//     	constructor(){
+//     		this.age = 18;
+//     		this.sex = 'nan';
+//     	}
+//     	study(){                   //方法一般写在constructor外面
+//     		alert('我爱学习啦啦啦')  
+//     	};            //分号可有可无，压缩的时候必须写，但是不能写逗号
+//     	play(){
+//     		alert('我爱玩');
+//     	}
+//  }
+//  let zhangsan = new Student();
+//  console.log(zhangsan);
+//  zhangsan.study();
+//  zhangsan.play();
+
+
+
+    //构造函数 传参    
+//  function Student(name,age,sex){
+//  	    this[-1]= 'xxx';
+//          this.sex = sex;
+//      	this.name=name;
+//      	this.age=age;
+//      	this.say = function (value){   
+//      		alert(value);
+//      	}
+//      	this.study = function(){
+//      		alert(this.name);   //自己的方法可以调用自己的属性
+//      	}
+//      	this.speech = function(value){
+//      		this.say(value);    //方法可以调用方法
+//      	}
+//      }
+//  let zhangsan = new Student('zhangsan',18,'nan');
+//  console.log(zhangsan);
+//  console.log(zhangsan[-1]);   
+//  zhangsan.say('说话');   //给对象的方法传参，调用的时候传
+//  zhangsan.study();
+//  zhangsan.speech('yanjiang');
+    
+    
+    //class类传参
+//   class Student{
+//     	constructor(age,sex){
+//     		this.age = age;
+//     		this.sex = sex;
+//     	}
+//     	study(){                   //方法一般写在constructor外面
+//     		alert(this.age);  
+//     	};            //分号可有可无，压缩的时候必须写，但是不能写逗号
+//     	play(){
+//     		this.study();
+//     	}
+//  }
+//  let zhangsan = new Student(20,'男');
+//  console.log(zhangsan);
+//  zhangsan.study('我爱学习啦啦啦');
+//  zhangsan.play();
+    
+    
+    //my Array
+//  var arr = new Array('a','b','c','d');
+//  console.log(arr);
+    
+    
+    //模仿数组    把传进来的参数以数组的形式放在arr里；
+    
+//  let arr = new myArray('a','b','c','d');
+//  console.log(arr);
+//  arr.push('x','y','z');
+//  console.log(arr);
+//  let index = arr.indexof('x');
+//  console.log(index);
+//  let last = arr.lastIndexof('a');
+//  console.log(last);
+//  let ind = arr.includes('a');
+//  console.log(ind);
+//  let newarr = arr.reverse();
+//  console.log(newarr);
+//  let str = arr.join('-');
+//  console.log(str);
+//  console.log(arr.sortUp());
+//  
+//  let we = arr.some(function(x){
+//  	return typeof x == 'string';
+//  })
+//  console.log(we);
+//  let eve = arr.every(function(x){
+//  	return typeof x == 'string';
+//  })
+//  console.log(eve);
+//  function myArray(){
+//  	for (let i=0;i<arguments.length;i++) {
+//  		this[i] = arguments[i];
+//  	}
+//  	this.length = arguments.length;
+//  	//往数组里添加元素
+//  	this.push = function(){
+//  		for(let i=0;i<arguments.length;i++){
+//  			this[this.length] = arguments[i];
+//  			this.length++;
+//  		}
+//  		
+//  	}
+//      //查看某个数组元素第一次出现的位置
+//      this.indexof = function (value){
+//      	for (let i=0;i<this.length;i++) {
+//      		if(this[i]==value){
+//      			return i;
+//      		}
+//      	}
+//      	return -1;
+//      }
+//      //查看某个数组元素最后一次出现的位置        
+//      this.lastIndexof = function (value){
+//      	for (let i=this.length;i>-1;i--) {
+//      		if(this[i]==value){
+//      			return i;
+//      		}
+//      	}
+//      	return -1;
+//      }
+//      //include  数组中是否存在某个特定的值
+//      this.includes = function(value){
+//      	for (let i =0;i<this.length;i++){
+//      		if(this[i] == value){
+//      			return true;
+//      		}
+//      	}
+//      	return false;
+//      }
+//      //reverse   把数组反转
+//      this.reverse = function (){
+//      	let newarr=[];
+//      	for (let i=this.length-1;i>-1;i--) {
+//      		newarr[newarr.length] = this[i];
+//      	}
+//      	return newarr;
+//      }
+//      // join  把数组里的元素连起来
+//      this.join = function(value){
+//      	var str='';
+//      	for (let i=0;i<this.length;i++) {
+//      		if(i<this.length-1){
+//      			str += this[i]+value;
+//      		}
+//      		else{
+//      			str += this[i];
+//      		}
+//      	}
+//      	return str;
+//      }
+//      //sortUp   升序
+//      this.sortUp = function(){
+//      	for (let i=0;i<this.length;i++) {
+//      		for (let j=i+1;j<this.length;j++) {
+//      			if(this[i]>this[j]){
+//      				var temp = this[i];
+//      				this[i] = this [j];
+//      				this[j] = temp;
+//      			}
+//      		}
+//      	}
+//      	return this;
+//      }
+//      //some  是否存在一个值满足条件
+//      
+//      this.some = function(fn){
+//      	for (let i=0;i<this.length;i++) {
+//      		if(fn(this[i])){
+//      			return true;
+//      		}
+//      	}
+//      	return false;
+//      }
+//      
+//     //every 每个元素都满足，则返回true
+//     this.every = function(fn){
+//     	    for (let i = 0;i<this.length;i++) {
+//     		    if(!(fn(this[1]))){
+//     		    	return false;
+//     		    }
+//       	}
+//     	    return true;
+//     }
+//  }
+//  
+//  
+//  let arr1 = new myArray1(1,2,3,4,undefined,5,6);
+//  console.log(arr1);
+//  arr1.push('x','y');
+//  console.log(arr1);
+//  let fil = arr1.filter(function(a){
+//  	return a%2 ==0;
+//  });
+//  console.log(fil);
+//  let newm = arr1.map(function(x,index){
+//  	return x*3;
+//  });
+//  console.log(newm);
+//  let deln = arr1.delNull();
+//  console.log(deln);
+//  function myArray1(){
+//  	for (let i=0;i<arguments.length;i++) {
+//  		this[i] = arguments[i];
+//  	}
+//  	this.length = arguments.length;
+//  	//return this;
+//  	
+//  	//push
+//  	this.push = function(){
+//  		for(let i =0;i<arguments.length;i++){
+//  			this[this.length] = arguments[i];
+//  			this.length++;
+//  		}
+//  	}
+//  	//filter 筛选偶数
+//  	this.filter = function(fn){
+//  		let newarr =new myArray1();
+//  		for (let i=0;i<this.length;i++) {
+//  			if(fn(this[i])){
+//  				newarr.push(this[i]);
+//  			}
+//  		}
+//  		return newarr;
+//  	}
+//  	
+//  	//map   
+//  	this.map = function(fn){
+//  		let newarr=new myArray1();
+//  		for (let i=0;i<this.length;i++) {   			
+//  				newarr.push(fn(this[i]),index);   			
+//  		}
+//  		return newarr;
+//  	}
+//  	//去空     delNull
+//  	this.delNull = function(){
+//  		let newarr = new myArray1();
+//  		for (let i= 0;i<this.length;i++) {
+//  			if(!(this[i]===undefined)){
+//  				newarr.push(this[i]);
+//  			}
+//  		}
+//  		return newarr;
+//  	}
+//  }
+    
+    
+//        prototype 原型对象   方法一般写在原型对象里，属性一般写在构造函数里
+//      function Person(){
+//      	this.name = 'zhangsan';
+//      	this.age = 18;
+//      	this.sex = 'nan';
+//      	
+//      	this.say = function(){
+//      		alert(this.name);
+//      	}
+//      	this.play = function(){
+//      		alert(`${this.name}玩儿`)
+//      	}
+//      	this.son = {
+//      		
+//      	}  //对象的属性还可以是一个属性
+//      	this.eat = function(){
+//      		alert('吃饭1');      //添加eat方法（1）
+//      	}
+//      }
+//      
+//      Person.prototype = {
+//      	sleep : function(){
+//      		alert('休息');
+//      	},    //把方法放在构造函数原型对象上,然后方法就存在代码段里了，可以节省内存
+//      	eat:function(){
+//      		alert('吃饭2');    //添加eat方法（2）
+//      	}
+//      }
+//      
+//      Person.prototype.eat=function(){
+//      	alert('吃饭3');       //添加eat方法（3）
+//      }
+//      
+//      let zhangsan = new Person();
+//      let lisi = new Person();
+////      lisi.sleep();
+//      zhangsan.eat=function(){
+//      	alert('吃饭4');    //添加eat方法（4）
+//      };  
+////      zhangsan.eat();
+////      zhangsan.say();     //zhangsan
+////      alert(zhangsan.say());     //zhangsan 和  undefined
+////      console.log(zhangsan.say == lisi.say);    //比较的是地址 ，在空间里存储的地址不一样，结果是false
+////      console.log(zhangsan.say() == lisi.say());    //比较的是属性 ，都是zhangsan，结果是true      
+//		
+//		//删除对象的属性
+//		delete zhangsan.sex;
+////		alert(zhangsan.sex);       //undefined
+//		
+//		//方法
+//		delete zhangsan.say;
+//		
+//		//删除整个张三对象
+//		zhangsan=null;
+//		alert(zhangsan);
+//		
+		
+		//
+//		function Student(){
+//			this.name='student';
+//		}
+//		function People(){
+//			this.name='people';
+//		}
+//		let zhangsan = new Student();
+//		let lisi = new People();
+//		console.log(zhangsan instanceof Student);
+//		console.log(lisi instanceof Student);
+//		
+//		let arr = [];
+//		console.log(arr instanceof Array);
+
+
+
+//      //继承
+//      function Person(){
+//      	this.age = 18;
+//      	this.sex = 'nan';
+//      	this.skill = function(){
+//      		alert('加油吧');
+//      	}
+//      }
+//      Person.prototype = {
+//      	say : function(){
+//      		alert('哈哈哈');
+//          }
+//      }
+//      Person.prototype.skill= function(){
+//      	alert('hehe');
+//      }
+//		function Student(){
+//			this.class = '1707';
+//			this.tea = '李星';
+//			this.skill = function(){
+//				alert('加油哦')
+//			}
+//		}
+//		Student.prototype.skill = function(){
+//			alert('加油2');
+//		}
+//		Student.prototype = new Person();
+//		
+//		let zhangsan = new Person();
+//		let lisi = new Student();
+////		alert(lisi.sex);
+//		lisi.skill();    //如果构造函数和原型函数里都有同一个方法，弹lisi的构造函数里的skill方法，构造函数里的优先级大于其原型函数里的
+//		lisi.say();                //如果父类的构造函数和父类的原型对象里都有，则优先继承父类构造函数里的方法
+//      lisi.__proto__==Student.prototype;
+//      Student.prototype.__proto__==Person.prototype;
+//      Person.prototype.__proto__==Object.prototype;
+//      Object.prototype.__proto__;
+       
+        
+        
+        
+        // string 
+//      let str = 'abcdabcd';
+//      console.log(str.constructor);    //返回str的构造函数
+//      console.log(str.__proto__);     //str的构造函数的原型对象
+//      console.log(str.length);   //获取字符串的长度，只能获取，不可以修改，是一个只读属性
+        
+        
+//      console.log(str.charAt(0));
+//      console.log(str.charCodeAt(1));  
+//      console.log(String.fromCharCode(98));
+        
+        
+//      console.log(str.indexOf('abcd'));    //0;返回一个字符串在另一个字符串中首次出现的位置；如果存在，返回位置；如果找不到，则返回-1
+//      console.log(str.lastIndexOf('abcd'));      //4；返回一个字符串在另一个字符串中最后一次出现的位置
+//      console.log(str.includes('abr'));    //判断一个字符串中是否存在另一个字符串，，存在，返回true，不存在，false
+        
+  
+//      function includes (ostr,fstr){
+//      	let result = ostr.indexOf(fstr);
+//      	if(result!=-1){
+//      		return true;
+//      	}
+//      	return false;
+//      }
+        
+//      console.log(str.slice(0,4)); //abcd  从开始位置到结束位置，但是不包括结束位置，对原来字符串没有影响
+//      console.log(str.slice(0,str.length-1)); //abcdabc  
+//      console.log(str.slice(0,-1)); //abcdabc     -1表示从末尾开始计数
+//      console.log(str.slice(2)); //cdabcd   省掉结束位置，会默认劫道最后      
+//		
+//		console.log(str.substr(-7,5));   //bcdab   第二个参数是截取的长度
+//		console.log(str.substr(2));   //cdabcd   省略结束位置，会默认截取到最后  
+//		
+//		console.log(str.replace('abcd','****'));  //****abcd
+//      let str='abcdefabcd';
+//      let rstr = 'bc';
+//      let result = replaceAll(str,rstr);
+//      console.log(result);
+//		function replaceAll(str,rstr){
+////			let star= '';
+////			for (let i=0;i<rstr.length;i++) {    //第二种方法
+////				star += '*';
+////			}
+//          let star = '*'.repeat(rstr.length);    //第一种方法
+//			while(str.includes(rstr)){
+//				str = str.replace(rstr,star);
+//			}
+//			return str;
+//		}
+
+//      console.log(str.match('cd'));  //找不到就返回null
+        
+//      let str = '  abjdkddd  ';
+//      console.log(str.trim());
+
+
+//       let str = 'a-b-c-d';
+//       console.log(str.split('-',1));
+         
+//       let str = 'abcd';
+//       let str1 = 'QWER';
+//       console.log(str.toUpperCase());
+//       console.log(str1.toLowerCase());
+
+
+//      let str = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+//      function replaceALL(str,nstr){
+//      	let star = '*'.repeat(nstr.length);
+//      	let arr=[];
+//      	while(str.includes(nstr)){
+//      		arr.push(str.indexOf(nstr))  ;
+//      		str = str.replace(nstr,star);
+//      	}
+//      	return arr;
+//      }
+//      console.log(replaceALL(str,'baidu'));
+//
+//
+//  let str = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+//  function position(str,rstr){
+//  let arr = [];   	   
+//      for (i=0;i<str.length;i++) {
+//      	if(str.substr(i,rstr.length)==rstr){
+//      		arr.push(i);
+//      	}
+//      }
+//      return arr;
+//  }
+//  console.log(position(str,'www'));
+
+
+
+    
+    
+    //9-14
+//  function Person(){
+//  	this.age = 18;
+//  	this.sex = 'nan';
+//      this.say = function(){
+//      	alert('说话');
+//      }
+//  }
+//  Person.prototype = {
+//  	play:function(){
+//  		alert('玩儿')
+//  	},
+//  }
+//  Person.aa = 'qwe';    //只是给Person这个对象添加了一个属性，zhangsan身上不具备这个属性
+//  let zhangsan = new Person();
+//  console.log(zhangsan);
+    
+    
+    
+   
+//  for (let i=0;i<arr.length;i++) {
+//  	console.log(arr[i]);
+//  }
+//  for (let i in arr) {
+//  	console.log(arr[i]);
+//  }
+//  let i=0;
+//  while(i<arr.length){
+//  	console.log(arr[i]);
+//  	i++;
+//  }
+    
+//   let arr = [1,2,3,4,5];
+//   let arr1 = new Array(5);  //当构造函数只有参数，并且参数是数字，那么数字是数组的长度，里面的元素这时候都是undefined
+//   let arr2 = Array.of(5);  //构造函数有一个方法of，会把参数当成数组的元素穿进去，这时候数组是[5];
+//   let re = arr.push(7,8,9);  
+//   console.log(re);       //8
+//   console.log(arr);      //[1,2,3,4,5,6,7,8,9];
+     
+//  let re = arr.unshift('x');    
+//  console.log(re);    //6
+//  console.log(arr);       //['x',1,2,3,4,5]
+      
+//  arr.pop();
+//  let re = arr.pop();
+//  console.log(re);      //4
+//  console.log(arr);     //[1,2,3,4];
+//    
+//  arr.shift();
+//  console.log(arr);
+
+//  console.log(arr.splice(1,2,'x'));
+//  console.log(arr);
+
+//  
+//  let arr1 = [6,7,8];
+//  for(i=0;i<arr1.length;i++){
+//  	arr.push(arr1[i]);
+//  }
+//  	console.log(arr);
+//  arr.push(...arr1);
+//  console.log(arr);
+
+//  let str = arr.join('-');  //不写连接符，默认是逗号连接
+//  console.log(str);
+//  console.log(arr);
+//  console.log(arr.reverse());
+//  let arr=[1,2,3,4,5,6,102];
+////  console.log(arr.sort());   //按照字符串的排序规则，按ASCII
+//  arr.sort(function(a,b){
+//  	return a<b;
+//  })    //按照数字方式排序
+//  console.log(arr);
+     
+//  let arr= [1,2,3,-1,5,6,7];
+//  let sum=0;    //没有返回值，定义到外面
+//  arr.forEach(function(value,index,obj){	
+//  	sum += value;
+//  })
+//  console.log(sum);
+    
+//  let newarr = arr.filter(function(value,index,obj){
+//  	return value%2==0;
+//  })
+//  console.log(newarr);
+////  
+////  
+////  
+//  let map = arr.map(function(value,index,obj){
+//  	return value+index;
+//  })
+//  console.log(map);
+//  
+//  let som = arr.some(function(value){
+//  	return value>0;
+//  })
+//  console.log(som);
+//  
+//  let eve = arr.every(function(value){
+//  	return value>0;
+//  })
+//  console.log(eve);
+//  
+//  let map = arr.map((value,index)=>value+index);
+//  let map = arr.map(value=>value*2);
+//  let map = arr.map(()=>1);
+//  
+//  console.log(map);
+    
+//  //把arr里重复的去掉，再放入一个新的数组，如果新的数组里有了，就不放了
+////  let arr = [1,2,3,4,5,1,2,3];
+////  function delRE(){
+////  	let newarr = [];
+////  	for (let i=0;i<arr.length;i++) {
+////  		if(!(newarr.includes(arr[i]))){
+////  			newarr.push(arr[i]);
+////  		} 		
+////  	}
+////  	return newarr;
+////  }
+////  let re = delRE(arr);
+////  console.log(re);
+//  
+//  
+//  
+//  //如果最后一次出现的次数是它 的下标，那么这个元素肯定出现了一次
+////  let arr = [1,2,3,4,5,1,2,3];
+////  function put(){
+////  	let newarr = [];
+////  	for (let i=0;i<arr.length;i++) {
+////  		if(i == arr.lastIndexOf(arr[i])){
+////  			newarr.push(arr[i]);
+////  		}
+////  	}
+////  	return newarr;
+////  }
+////  let r = put(arr);
+////  console.log(r);
+//
+//  //定义flag初始值是true，如果在后面找到和arr[i]相同的了，flag就成了false，然后break，如果遍历了arr[j]，没找到和arr[i]相同的，就放在新数组里
+////  let arr= [1,2,3,4,5,6,1,2,3];
+////  function delre(arr){
+////  	let newarr = [];
+////  	for (i=0;i<arr.length;i++) {
+////  		let flag = true;
+////  		for (j=i+1;j<arr.length;j++) {
+////  			if(arr[i]==arr[j]){
+////  				flag = false;
+////  				break;
+////  			}
+////  		}
+////  		if(flag){
+////  			newarr.push(arr[i]);
+////  	   }	
+////      }
+////  	return newarr;
+////  }
+////  let re = delre(arr);
+////  console.log(re);
+//  
+//  //
+////  let arr = [1,2,3,4,5,6,1,2,3];
+//  Array.prototype.delRepeat= function(){
+//  	let newarr = [];
+//  	for (let i= 0;i<this.length;i++) {
+//  		let arr1=[];
+//  		for (j=i+1;j<this.length;j++) {
+//  			arr1[arr1.length] = this[j];
+//  		}
+//  		if(!(arr1.includes(this[i]))){
+//  			newarr.push(this[i]);
+//  		}
+//  	}
+//  	return newarr;
+//  }
+////  console.log(delRepeat(arr));
+//  
+//  let arr1 =  Array.of(1,2,3,4,5,6,7,1,2,3);
+//  console.log(arr1.delRepeat());
+
+
+
+//  console.log(Math.abs(10));    //绝对值
+//  console.log(Math.max(-10,20,1));  //最大值
+//  console.log(Math.min(-10,20,1));   //最小值
+//  
+//  console.log(Math.round(-10.5));   //近似值   -10
+//  console.log(Math.round(-10.6));   //近似值   -11  
+//  
+//  console.log(Math.ceil(10.5));   //向上取整   11
+//  console.log(Math.ceil(10.4));   //向上取整   11
+//  console.log(Math.ceil(-10.4));   //向上取整   -10  
+//  
+//  console.log(Math.floor(10.4));   //向下取整   10
+//  console.log(Math.floor(0.4));   //向下取整   0
+//  
+//  console.log(Math.random());   //随机数  范围是0-1
+//  console.log(Math.random()*10);   //随机数  范围是0-10
+//  
+//  console.log(Math.pow(2,3));   //x的y次方
+//  console.log(Math.sqrt(4));   //x的y次方
+    
+      //从数组里随机取三个
+//  let arr = [1,2,3,4,5,6];
+//  function ran(arr){  
+//     let newarr = [];
+//     for (let i=0;i<3;i++) {	
+//         let num = Math.floor(Math.random()*arr.length);
+//         if(!(newarr.includes(arr[num]))){
+//         	 newarr.push(arr[num]);
+//         }else{
+//         	i--;
+//         }
+//
+////         while(newarr.includes(arr[num])){
+////         	  num = Math.floor(Math.random()*arr.length)
+////         }
+////         newarr.push(arr[num]); 
+//      }
+//      return newarr;
+//  }
+//  console.log(ran(arr));
+    
+    
+    let arr = [1,2,3,4,5,6];
+    function ran(arr){  
+       let newarr = [];	
+          while(newarr.length<3){
+           	let num = Math.floor(Math.random()*arr.length);
+           	if(!(newarr.includes(arr[num]))){
+           	 newarr.push(arr[num]);
+           }
+       }
+        return newarr;
+    }
+    console.log(ran(arr));
+    
+    
+//  let box = document.getElementById('box');
+//  box.onmouseover = function(){
+//  	box.style.background = color();
+//  }
+//
+//  function color(){
+//  	let str = 'rgb('
+//  	for (let i=0;i<3;i++) {
+//  		let num = Math.round(Math.random()*255);
+//  		str +=num+',';
+//  	}
+//  	str = str.slice(0,-1);
+//  	str += ')';
+//  	return str;
+//  }
+		</script>
+	</body>
+</html>

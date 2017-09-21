@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<style >
+			button{
+				width: 50px;
+				height: 25px;
+				background: blueviolet;
+				color: #fff;
+				line-height: 25px;
+				text-align: center;
+				border-radius: 4px;
+				outline: none;
+			}
+		</style>-->
+	</head>
+	<body>
+		<!--<h1><a href="bom1.html">这是bom的页面</a></h1>
+		<button id = 'forward'>前进</button>
+		<button id = 'back'>后退</button>
+		<button id = 'refresh'>刷新</button>-->
+		<script >
+//			console.log(window.screenLeft);//浏览器距离屏幕左边的距离
+//			console.log(window.screenX);//浏览器距离屏幕左边的距离
+//			
+//			console.log(screenTop);
+//			console.log(screenY);
+			
+//			console.log(window.innerWidth); //获取内容可见区域的尺寸    ；只能在IE8以上；
+//			console.log(window.innerHeight);
+			
+//			console.log(outerWidth);//获取浏览器的宽高
+//			console.log(outerHeight);
+//			
+            //调兼容性,因为上述方法在ie里不能用，所以写成以下语法
+//			alert(document.documentElement.clientWidth);//是文档对象元素的客户端的宽度， 获取内容的宽高
+//			alert(document.documentElement.clientHeight);//是文档对象元素的客户端的宽度， 获取内容的宽高
+			
+			//查看window身上的属性，window可以省略
+//			window.frames;//获取当前窗口的子窗口
+//			window.top;//得到当前窗口的顶层窗口
+//			window.parent;//得到当前窗口的父窗口
+//			window.self;//当前的窗口    也可以写成self或者window
+			
+			//实现不了，但是有这个方法
+//			moveTo(100,100);//调整浏览器的位置，不管当前在哪儿，结果是移动到100,100
+//			resizeTo(300,300);//调整浏览器窗口的大小，
+//			moveBy(100,100);//在当前位置移动100,100
+
+            //1第一个参数是回调函数，第二个是周期，单位是ms,最小是4，就算写的0，也会默认的是4
+//          window.setInterval(function(){
+//          	alert(1);
+//          },1000);//指定的周期内不断的去执行某一个函数
+
+            //2
+//          function fn(){
+//          	alert(1);
+//          }
+//          window.setInterval(fn,1000);
+
+            //3  箭头函数
+//          window.setInterval(()=>{alert(1)}, 1000);
+            
+            
+//          function fn(){
+//          	alert(1);
+//          }
+//          let r = window.setInterval(fn,1000);//每个周期都执行
+//          window.clearInterval(r);//清掉时间函数
+
+//          function fn(){
+//          	alert(1);
+//          }
+//          let r = setTimeout(fn,1000);//在指定时间后执行fn，只会执行一次
+//          clearInterval(r);//清掉
+            
+            
+            //用setTimeout模拟setInterval
+            //用递归
+//          function fn(){
+//          	alert(1);
+//          	setTimeout(fn,1000);
+//          }
+//          fn();
+
+            
+//          confirm("确定退出吗");//返回值是true和false
+
+            //地址,名字,修饰,是否有历史记录
+//          open('y.html','newwindow','width=500,top=200','true');
+//          close();
+
+            //history是window的属性，其本身也是一个对象，拥有自己的属性方法
+             //length()   back()   go   当前进后退时，历史记录不会增加
+             //写事件时，js写在后面
+//          alert(history.length);
+//          history.back();//后退
+//          history.forward();//前进
+//          history.go(); //前进1,后退-1,刷新0
+//          let forward = document.getElementById('forward');
+//          forward.onclick = function(){
+//          	history.forward();
+//          	alert(history.length)
+//          }
+//          
+//          let back = document.getElementById('back');
+//          back.onclick = function(){
+//          	history.back();
+//          }
+//          let refresh = document.getElementById('refresh');
+//          refresh.onclick = function(){
+//          	history.go(0);
+//          }
+         
+         
+//       location.href = 'http://www.baidu.com';
+//       alert(location.href);
+//       location.assign('bom1.html');// 替换，有历史记录
+//       location.reload();//重新加载，flase 或者不传参，绕过本地缓存，重新加载；true，会调到本地缓存，加载快
+//       Location.replace('eccesice.html');//替换  之后没有历史记录
+        
+    
+		</script>
+	
+	</body>
+</html>
