@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/bowser.js"></script>
+		
+		<style>
+			.small{
+				width:100px;
+				height:100px;
+				border: 1px solid #999;
+				/*loat: left;*/
+				margin-right: 20px;
+				position: relative;
+			}
+			.small img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.zhe{
+			    width: 50px;
+			    height: 50px;
+			    background: rgba(0,0,0,0.3);
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    opacity: 0;
+			}
+			.opacity{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 200;
+			}
+			.big{
+				width: 100px;
+				height: 100px;
+				/*float: left;*/
+				position: relative;
+				margin-top: 30px;
+				overflow: hidden;
+				border: 1px solid #999;				
+			}
+			.big img{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="small">
+			<img src="img/12.jpg"/>
+			<div class="zhe"></div>
+			<div class="opacity"></div>
+		</div>
+		<div class="big">
+			<img src="img/12.jpg"/>
+		</div>
+	</body>
+	
+	<script>
+		window.onload = function(){
+			let zhe = document.querySelector('.zhe');
+			let opacity = document.querySelector('.opacity');
+		    let small = $('.small')[0];
+		    let big = $('.big')[0];
+		    let bigimg = $('img',big)[0];
+		    let smallimg = $('img',small)[0];
+		   
+		    let zhew = zhe.offsetWidth;
+		    let zheh = zhe.offsetHeight;
+		    let bw = big.offsetWidth;
+		    let bh = big.offsetHeight;
+		    let sw = small.offsetWidth;
+		    let sh = small.offsetHeight;
+		    let bili = bigimg.offsetWidth / smallimg.offsetWidth;
+		    opacity.addEventListener('mousemove',function(e){
+		    	opacity.addEventListener('mouseleave',function(){
+		    		zhe.style.opacity = 0;
+		    	})
+		    	zhe.style.opacity = 1;
+		    	let ox = e.offsetX- zhew/2 ;
+		    	let oy = e.offsetY- zheh/2;
+		    	if(ox> sw - zhew){
+		    		ox = sw - zhew
+		    	}
+		    	if(ox<0){
+		    		ox = 0;
+		    	}
+		    	if(oy> sh - zheh){
+		    		oy = sh - zheh
+		    	}
+		    	if(oy<0){
+		    		oy = 0;
+		    	}
+		    	zhe.style.left = ox +'px';
+		    	zhe.style.top = oy  +'px';
+		    	
+		    	bigimg.style.width = sw*bw/zhew+'px';
+		    	bigimg.style.height = sh*bh/zheh+'px';
+		    	
+		    	bigimg.style.left = -sw*ox/zhew+'px';
+		    	bigimg.style.top = -sh*oy/zheh+'px';
+		    })
+		}
+	</script>
+</html>
