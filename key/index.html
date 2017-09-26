@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			textarea{
+				width: 600px;
+				height: 200px;
+				position: absolute;
+				top: 10px;
+				left: 50%;
+				margin-left: -300px;
+				font-size: 20px;
+			}
+			button{
+				width: 50px;
+				height: 30px;
+				position: absolute;
+				top: 220px;
+				left: 930px;
+			}
+			.please{
+				line-height: 20px;
+				background: darkgray;
+				position: absolute;
+				top: 170px;
+				right: 390px;
+			}
+			.tijiao{
+				width: 700px;
+				height: 350px;
+				border: 1px solid red;
+				position: absolute;
+				bottom: 30px;
+				left: 50%;
+				margin-left: -350px;
+			}
+			.tijiao1{
+				width: 100%;
+				height: auto;
+				border: 1px solid red;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<textarea name="" rows="" cols="" maxlength="100" value=""></textarea>
+		<div class="please"></div>
+		<button>提交</button>
+		<div class="tijiao">
+			<!--<div class="tijiao1"></div>-->
+		</div>
+		
+	</body>
+	<script>
+		let texta = document.querySelector('textarea');
+		let btn = document.querySelector('button');
+		let please = document.querySelector('.please');
+		texta.onkeydown = function(){
+			if(length<100){
+				please.innerText= `请还可以输入${100-texta.value.length}个字`;
+			}
+		    if(length>=100){
+		    	please.innerText = '输入字数太多了，老铁';
+		    }  
+		}
+		let tijiao = document.querySelector('.tijiao')
+		btn.onclick = function(){
+			let content = texta.value;
+			let box = document.createElement('div');
+			box.className = 'tijiao1';
+			box.innerHTML = content;
+			box.style.display = 'block';
+			tijiao.appendChild(box);
+			texta.value = ' ';		
+		}
+//		console.log(e.key,e.keyCode);
+//           if(e.keyCode ==65){
+//           	alert(true);
+            //}
+//           if(e.shiftKey){
+//           	alert(true);
+//           }
+//           if(e.shiftKey && e.keyCode==13){
+//           	alert(true);
+//           }
+//		shift 16 
+        //大写 20
+        //Ctrl 
+//		zuo   37
+//		shang  38
+//		you 39
+//		xia 40
+//       enter 13
+	</script>
+</html>
