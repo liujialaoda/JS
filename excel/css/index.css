@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+h3{
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+}
+table{
+	text-align: center;
+	margin: 0 auto;
+}
+th{
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #000000;
+	padding: 5px 30px;
+	line-height: 30px;
+	width: 70px;
+}
+td{
+	padding: 5px 30px;
+	border: 1px solid #000;
+	line-height: 30px;
+	width: 50px;
+	/*background: #ccc;*/
+}
+tr:nth-of-type(2n){
+	background: #bfbdbd;
+}
+td > button{
+	padding: 0 5px;
+	font-size: 14px;
+}
+.add{
+	padding: 0 5px;
+	font-size: 14px;
+	float: left;
+	position: absolute;
+	right: 316px;
+	margin-top: 10px;
+}
+.celect{
+	padding: 0 5px;
+	font-size: 14px;
+	float: left;
+	position: absolute;
+	right: 316px;
+	margin-top: 50px;
+}
+.style{
+	clear: both;
+	
+}
